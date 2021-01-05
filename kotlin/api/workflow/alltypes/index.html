@@ -946,13 +946,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#androidxfragmentappfragmentactivity" class="md-nav__link">
-    androidx.fragment.app.FragmentActivity
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#comsquareupworkflow1uimodalhasmodals" class="md-nav__link">
     com.squareup.workflow1.ui.modal.HasModals
   </a>
@@ -1282,13 +1275,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#comsquareupworkflow1uiworkflowfragment" class="md-nav__link">
-    com.squareup.workflow1.ui.WorkflowFragment
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#comsquareupworkflow1workflowidentifier" class="md-nav__link">
     com.squareup.workflow1.WorkflowIdentifier
   </a>
@@ -1312,13 +1298,6 @@
           <li class="md-nav__item">
   <a href="#comsquareupworkflow1workflowoutput" class="md-nav__link">
     com.squareup.workflow1.WorkflowOutput
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#comsquareupworkflow1uiworkflowrunner" class="md-nav__link">
-    com.squareup.workflow1.ui.WorkflowRunner
   </a>
   
 </li>
@@ -1462,8 +1441,6 @@ are not prepared to update when changing even minor workflow versions. Proceed w
 be ready to have the rug pulled out from under you.</p>
 <p>| (extensions in package com.squareup.workflow1)</p>
 <h5 id="kotlinxcoroutinesflowflow"><a href="../com.squareup.workflow1/kotlinx.coroutines.flow.-flow/">kotlinx.coroutines.flow.Flow</a><a class="headerlink" href="#kotlinxcoroutinesflowflow" title="Permanent link">&para;</a></h5>
-<p>| (extensions in package com.squareup.workflow1.ui)</p>
-<h5 id="androidxfragmentappfragmentactivity"><a href="../com.squareup.workflow1.ui/androidx.fragment.app.-fragment-activity/">androidx.fragment.app.FragmentActivity</a><a class="headerlink" href="#androidxfragmentappfragmentactivity" title="Permanent link">&para;</a></h5>
 <p>|</p>
 <h5 id="comsquareupworkflow1uimodalhasmodals"><a href="../com.squareup.workflow1.ui.modal/-has-modals/">com.squareup.workflow1.ui.modal.HasModals</a><a class="headerlink" href="#comsquareupworkflow1uimodalhasmodals" title="Permanent link">&para;</a></h5>
 <p>Interface implemented by screen classes that represent a stack of
@@ -1635,10 +1612,6 @@ arbitrary asynchronous events from the outside world.</p>
 <h5 id="comsquareupworkflow1workflowaction"><a href="../com.squareup.workflow1/-workflow-action/">com.squareup.workflow1.WorkflowAction</a><a class="headerlink" href="#comsquareupworkflow1workflowaction" title="Permanent link">&para;</a></h5>
 <p>An atomic operation that updates the state of a <a href="../com.squareup.workflow1/-workflow/">Workflow</a>, and also optionally emits an output.</p>
 <p>|</p>
-<h5 id="comsquareupworkflow1uiworkflowfragment"><a href="../com.squareup.workflow1.ui/-workflow-fragment/">com.squareup.workflow1.ui.WorkflowFragment</a><a class="headerlink" href="#comsquareupworkflow1uiworkflowfragment" title="Permanent link">&para;</a></h5>
-<p>A <a href="#">Fragment</a> that can run a workflow. Subclasses implement <a href="../com.squareup.workflow1.ui/-workflow-fragment/on-create-workflow/">onCreateWorkflow</a>
-to configure themselves with a <a href="../com.squareup.workflow1/-workflow/">Workflow</a> and <a href="../com.squareup.workflow1.ui/-workflow-runner/-config/props/">inputs</a>.</p>
-<p>|</p>
 <h5 id="comsquareupworkflow1workflowidentifier"><a href="../com.squareup.workflow1/-workflow-identifier/">com.squareup.workflow1.WorkflowIdentifier</a><a class="headerlink" href="#comsquareupworkflow1workflowidentifier" title="Permanent link">&para;</a></h5>
 <p>Represents a <a href="../com.squareup.workflow1/-workflow/">Workflow</a>&lsquo;s &ldquo;identity&rdquo; and is used by the runtime to determine whether a workflow
 is the same as one that was rendered in a previous render pass, in which case its state
@@ -1649,15 +1622,11 @@ should be re-used; or if it&rsquo;s a new workflow and needs to be started.</p>
 of workflows.</p>
 <p>|</p>
 <h5 id="comsquareupworkflow1uiworkflowlayout"><a href="../com.squareup.workflow1.ui/-workflow-layout/">com.squareup.workflow1.ui.WorkflowLayout</a><a class="headerlink" href="#comsquareupworkflow1uiworkflowlayout" title="Permanent link">&para;</a></h5>
-<p>A view that can be driven by a <a href="../com.squareup.workflow1.ui/-workflow-runner/">WorkflowRunner</a>. In most cases you&rsquo;ll use
-<a href="../com.squareup.workflow1.ui/androidx.fragment.app.-fragment-activity/set-content-workflow/">Activity.setContentWorkflow</a> or subclass <a href="../com.squareup.workflow1.ui/-workflow-fragment/">WorkflowFragment</a>
-rather than manage this class directly.</p>
+<p>A view that can be driven by a stream of renderings (and an optional <a href="../com.squareup.workflow1.ui/-view-registry/">ViewRegistry</a>)
+passed to its <a href="../com.squareup.workflow1.ui/-workflow-layout/start/">start</a> method.</p>
 <p>|</p>
 <h5 id="comsquareupworkflow1workflowoutput"><a href="../com.squareup.workflow1/-workflow-output/">com.squareup.workflow1.WorkflowOutput</a><a class="headerlink" href="#comsquareupworkflow1workflowoutput" title="Permanent link">&para;</a></h5>
 <p>Wrapper around a potentially-nullable <a href="../com.squareup.workflow1/-workflow-output/#OutputT">OutputT</a> value.</p>
-<p>|</p>
-<h5 id="comsquareupworkflow1uiworkflowrunner"><a href="../com.squareup.workflow1.ui/-workflow-runner/">com.squareup.workflow1.ui.WorkflowRunner</a><a class="headerlink" href="#comsquareupworkflow1uiworkflowrunner" title="Permanent link">&para;</a></h5>
-<p>Uses a <a href="../com.squareup.workflow1/-workflow/">Workflow</a> and a <a href="../com.squareup.workflow1.ui/-view-registry/">ViewRegistry</a> to drive a <a href="../com.squareup.workflow1.ui/-workflow-layout/">WorkflowLayout</a>.</p>
 <p>|</p>
 <h5 id="comsquareupworkflow1testingworkflowtestparams"><a href="../com.squareup.workflow1.testing/-workflow-test-params/">com.squareup.workflow1.testing.WorkflowTestParams</a><a class="headerlink" href="#comsquareupworkflow1testingworkflowtestparams" title="Permanent link">&para;</a></h5>
 <p>Defines configuration for workflow testing infrastructure such as <code>testRender</code>, <code>testFromStart</code>.
